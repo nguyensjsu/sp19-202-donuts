@@ -8,20 +8,30 @@
 
 # Team Project Repo 
 
-## Team Name
+## Team Name: Donuts
 
-## Team Members
+## Team Members:
+1. Chi Tran
+2. Tushar Sharma
+3. Varun Potlacheruvu 
+4. Tejas Desai
 
-* [Name](url_to_your_github_repo)
+* [Name]: https://github.com/nguyensjsu/sp19-202-donuts
+
 
 ## Project Name
 
 ## Project Description
 
 ## Project Progress
+Setting up project’s document
 
 ### Burndown Map
 
 ### Project Dashboard
 
 ### Individual Contributions
+1. Chi Tran
+2. Tushar Sharma
+3. Varun Potlacheruvu
+4. Tejas Desai
