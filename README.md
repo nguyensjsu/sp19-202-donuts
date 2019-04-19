@@ -1,37 +1,27 @@
-
-*Please do the following:*
-
-1. Edit this readme file first
-
-2. Read './document/README.md' for instructions about team repo submissions.
-
-
 # Team Project Repo 
 
 ## Team Name: Donuts
 
 ## Team Members:
-1. Chi Tran
+1. Varun Potlacheruvu
 2. Tushar Sharma
-3. Varun Potlacheruvu 
-4. Tejas Desai
+3. Tejas Desai
 
-* [Name]: https://github.com/nguyensjsu/sp19-202-donuts
+* [Team Donuts Repo]: https://github.com/nguyensjsu/sp19-202-donuts
 
 
-## Project Name
+## Shark Attack
 
 ## Project Description
 
 ## Project Progress
-Setting up project’s document
+Setting up projectâ€™s document
 
 ### Burndown Map
 
 ### Project Dashboard
 
 ### Individual Contributions
-1. Chi Tran
+1. Varun Potlacheruvu
 2. Tushar Sharma
-3. Varun Potlacheruvu
-4. Tejas Desai
+3. Tejas Desai
