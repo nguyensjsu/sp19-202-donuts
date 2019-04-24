@@ -14,15 +14,11 @@
 5. Narrowed down on design patterns that could be used for the various user stories in the project
 6. Design session with the team to come up with a high level design of the project
 
-I also picked a XP value of Commmunication. As part of this, during the course of the week I suggested below:
-1. To co-ordinate with each other when working on the UML Analysis diagrams
-2. To help each other work effectively while implementing the design patterns
+I picked the XP value of Feedback. As part of this, during the course of the week I suggested below:
+1. To give the team members feedback on their contributions i.e if they were in line with specifications and how they could be improved.
+2. To give the team feedback on their workflow and regularity
 
 ### What am I planning to work on next?
-1. Expand user stories to use case specification
-2. Draw UML Activiy Diagram 
-3. Implement the Observer pattern to have a running scoreboard counter
-
-
-### What tasks are blocked waiting on another team member?
-1. Waiting on Tushar and Tejas to provide the use-case analysis and level changes pattern implementation
+1. Provide use-case analysis
+2. Draw UML Activiy Diagram with team
+3. Implement the Stratergy pattern for level changes
