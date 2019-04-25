@@ -11,10 +11,9 @@
 ## Team Name: Donuts
 
 ## Team Members:
-1. Chi Tran
-2. Tushar Sharma
-3. Varun Potlacheruvu 
-4. Tejas Desai
+1. Tushar Sharma
+2. Varun Potlacheruvu 
+3. Tejas Desai
 
 * [Name]: https://github.com/nguyensjsu/sp19-202-donuts
 
