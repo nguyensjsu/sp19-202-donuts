@@ -1,9 +1,11 @@
 import greenfoot.*;
 import java.util.ArrayList;
 /**
- * This class defines a shark. Sharks swim in the ocean and look to eat fish and turtles, but 
-   can get caught by a hook.
+ * This class defines a shark. Sharks swim in the ocean and look to eat fish and turtles, but
+  * can get caught by a hook.
  */
+
+
 public class Shark extends Actor implements Subject
 {
 
@@ -11,9 +13,9 @@ public class Shark extends Actor implements Subject
     private Actor fish, turtle, hook;
     private World world;
     private GameMessage msg;
-     
+
     private ArrayList<Observer> observers =  new ArrayList<Observer>();
-    
+
     public Shark()
     {
         world = getWorld();
@@ -34,14 +36,14 @@ public class Shark extends Actor implements Subject
     {
         if (Greenfoot.isKeyDown("left"))  turn(-3);
 
-        if (Greenfoot.isKeyDown("right"))  turn(3); 
+        if (Greenfoot.isKeyDown("right"))  turn(3);
     }
-      
+
     /**
      * Check whether we have stumbled upon a hook
      * If we have, end game
      */
-    public void ifTouchHook() 
+    public void ifTouchHook()
     {
       hook = getOneIntersectingObject(Hook.class);
       if(hook != null)
@@ -52,33 +54,33 @@ public class Shark extends Actor implements Subject
           Greenfoot.stop();
       }
     }
-    
+
     /**
      * Check whether we have stumbled upon a fish
      * If we have, eat it. if not, do nothing
      */
-    public void lookForFish() 
+    public void lookForFish()
     {
       fish = getOneIntersectingObject(Fish.class);
       if(fish != null)
       {
           Greenfoot.playSound("bite.wav");
-          notifyObservers("fish", msg); // notify observers for updating score 
+          notifyObservers("fish", msg); // notify observers for updating score
           getWorld().removeObject(fish); //after fish is eaten, remove from the world
       }
     }
-      
+
    // OBSERVER PATTERN
     public void attach(Observer obj)
     {
-       observers.add(obj);  
+       observers.add(obj);
     }
-   
+
     public void detach(Observer obj)
     {
        observers.remove(obj);
     }
-    
+
     public void notifyObservers(String item, GameMessage msg)
     {
         for(Observer obj : observers)
