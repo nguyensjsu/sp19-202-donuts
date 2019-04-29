@@ -16,6 +16,7 @@ public class Shark extends Actor implements Subject
 
     private ArrayList<Observer> observers =  new ArrayList<Observer>();
 
+
     public Shark()
     {
         world = getWorld();
