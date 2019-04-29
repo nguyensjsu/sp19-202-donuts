@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Shark extends Actor implements Subject
 {
 
+
     private GreenfootImage image1;
     private Actor fish, turtle, hook;
     private World world;
