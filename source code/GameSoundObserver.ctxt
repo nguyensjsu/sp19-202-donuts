@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=GameSoundObserver
+comment1.params=
+comment1.target=GameSoundObserver()
+comment2.params=item\ msg
+comment2.target=void\ update(java.lang.String,\ GameMessage)
+numComments=3

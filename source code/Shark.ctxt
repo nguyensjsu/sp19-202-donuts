@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Shark
+comment0.text=\r\n\ This\ class\ defines\ a\ shark.\ Sharks\ swim\ in\ the\ ocean\ and\ look\ to\ eat\ fish\ and\ turtles,\ but\ \r\n\ \ \ can\ get\ caught\ by\ a\ hook.\r\n
+comment1.params=
+comment1.target=Shark()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkKeyPress()
+comment4.params=
+comment4.target=void\ ifTouchHook()
+comment4.text=\r\n\ Check\ whether\ we\ have\ stumbled\ upon\ a\ hook\r\n\ If\ we\ have,\ end\ game\r\n
+comment5.params=
+comment5.target=void\ lookForFish()
+comment5.text=\r\n\ Check\ whether\ we\ have\ stumbled\ upon\ a\ fish\r\n\ If\ we\ have,\ eat\ it.\ if\ not,\ do\ nothing\r\n
+comment6.params=obj
+comment6.target=void\ attach(Observer)
+comment7.params=obj
+comment7.target=void\ detach(Observer)
+comment8.params=item\ msg
+comment8.target=void\ notifyObservers(java.lang.String,\ GameMessage)
+numComments=9
