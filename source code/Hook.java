@@ -8,11 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hook extends Actor
 {
+<<<<<<< HEAD
+=======
+
+    private Actor shark;
+>>>>>>> efae10f3719b57ca82666378a47463eb4313538b
     /**
      * Act - do whatever the Hook wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
         {
             randomTurn();
@@ -32,6 +37,7 @@ public class Hook extends Actor
 
     public void randomTurn()
     {
+<<<<<<< HEAD
         if ( Greenfoot.getRandomNumber(100) < 10)
         {
             turn( Greenfoot.getRandomNumber(90)-45 ); 
@@ -51,5 +57,9 @@ public class Hook extends Actor
             Greenfoot.stop();
 
         }
+=======
+        if ( Greenfoot.getRandomNumber(800) < 10)
+          turn( Greenfoot.getRandomNumber(100)-45 );
+>>>>>>> efae10f3719b57ca82666378a47463eb4313538b
     }
-} 
+}
