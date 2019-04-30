@@ -3,12 +3,11 @@ import greenfoot.*;  // (Actor, World, Greenfoot, GreenfootImage)
 public class SharkWorld extends World
 {
     /**
-     * Create the shark world (the beach). Our world has a size
+     * Create the shark world (the beach). Our world has a size 
      * of 560x560 cells, where every cell is just 1 pixel.
      */
-    public SharkWorld()
+    public SharkWorld() 
     {
-
         super(560, 560, 1);
         int score;
         boolean isHungry=true;
@@ -19,7 +18,7 @@ public class SharkWorld extends World
         int sons = 10;
         int sum= sons+daughters;
         sum = sons;
-        int area;
+        int area; 
         area = 10 * 18;
         prepare();
     }
