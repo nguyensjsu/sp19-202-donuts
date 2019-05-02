@@ -4,6 +4,8 @@ import greenfoot.*;
 public class GameScoreObserver implements Observer
 {
     private int fishCount = SharkWorld.fishCount;
+    private int turtleCount = SharkWorld.turtleCount;
+
     public GameScoreObserver()
     {     
     }
@@ -16,14 +18,19 @@ public class GameScoreObserver implements Observer
         {    
             fishCount--;    
         }
-             
-       if (fishCount == 0 )
+        else if (item=="turtle")
+        {
+            turtleCount--;
+        }
+        
+         
+        if (fishCount == 0 && turtleCount == 0)
         {
             Greenfoot.playSound("Cheering.wav");
             Greenfoot.stop();
         }
         
-        msg.setText(SharkWorld.FISHSTRING + fishCount);
+        msg.setText(SharkWorld.FISHSTRING + fishCount +"\n"+ SharkWorld.TURTLESTRING + turtleCount);
     }
         
         

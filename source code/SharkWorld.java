@@ -4,8 +4,9 @@ public class SharkWorld extends World
 {
     
     Shark shark;  
-    static int fishCount = 8, hookCount = 2;
+    static int fishCount = 8, turtleCount = 4, hookCount = 2;
     static String FISHSTRING = "Fishes : ";
+    static String TURTLESTRING = "Turtles : ";
     /**
      * Create the shark world (the beach). Our world has a size 
      * of 800x600 cells, where every cell is just 1 pixel.
@@ -26,8 +27,8 @@ public class SharkWorld extends World
       GameMessage msg = new GameMessage();
       addObject(msg, 800, 60);
       addItems(); // add items to the world
-      shark = addSharkToWorld(); // adds Shark to the world and returns a reference to attach the observer
-      attachObservers(shark); // attaches GameScoreObserver to shark.
+      shark = addSharkToWorld(); // adds Shark to the world and returns a reference to attach the observers
+      attachObservers(shark); // attaches GameScoreObserver and GameSoundObserver to shark.
     }
     
     public Shark addSharkToWorld()
@@ -44,6 +45,11 @@ public class SharkWorld extends World
          Fish fish = new Fish();
          addObject(fish,Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(600));
         }
+        for (int i=0; i<turtleCount; i++)
+        {
+         Turtle turtle = new Turtle();
+         addObject(turtle,Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(600));
+        } 
         for (int i=0; i<hookCount; i++)
         {
          Hook hook = new Hook();
@@ -54,5 +60,6 @@ public class SharkWorld extends World
     public void attachObservers(Shark shark)
     {
         shark.attach(new GameScoreObserver()); //attaching the GameScoreObserver
+        shark.attach(new GameSoundObserver()); // attaching the GameSoundObserver
     }
 }

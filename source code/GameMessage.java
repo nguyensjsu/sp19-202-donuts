@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameMessage extends Actor
 {
     GreenfootImage gfImage;
-    private String initialCount = SharkWorld.FISHSTRING + SharkWorld.fishCount;
+    private String initialCount = SharkWorld.FISHSTRING + SharkWorld.fishCount +"\n" + SharkWorld.TURTLESTRING + SharkWorld.turtleCount;
     public GameMessage()
     {
 
@@ -16,7 +16,7 @@ public class GameMessage extends Actor
         gfImage.fillRect(5, 5, 90, 50);
         gfImage.setColor(Color.WHITE);
         
-        gfImage.drawString(initialCount, 20, 25); // Initialize the message with number of fishes
+        gfImage.drawString(initialCount, 20, 25); // Initialize the message with number of fishes and turtles
         setImage(gfImage);
     }
     
