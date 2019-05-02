@@ -5,7 +5,9 @@ public class GameScoreObserver implements Observer
 {
     private int fishCount = SharkWorld.fishCount;
     private int turtleCount = SharkWorld.turtleCount;
-
+    private String FISHSTRING = "Fishes : ";
+    private String TURTLESTRING = "Turtles : ";
+   
     public GameScoreObserver()
     {     
     }
@@ -28,9 +30,10 @@ public class GameScoreObserver implements Observer
         {
             Greenfoot.playSound("Cheering.wav");
             Greenfoot.stop();
+          
         }
         
-        msg.setText(SharkWorld.FISHSTRING + fishCount +"\n"+ SharkWorld.TURTLESTRING + turtleCount);
+        msg.setText(FISHSTRING + fishCount +"\n"+ TURTLESTRING + turtleCount);
     }
         
         

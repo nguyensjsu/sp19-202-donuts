@@ -22,12 +22,12 @@ public class Hook extends Objects
     public void turnAtEdge()
     {
         if ( isAtEdge() )
-          turn(8);
-    }
-
+          turn(15);
+    } 
+	
     public void randomTurn()
     {
-        if ( Greenfoot.getRandomNumber(800) < 10)
-          turn( Greenfoot.getRandomNumber(100)-45 ); 
+        if ( Greenfoot.getRandomNumber(100)<10)
+          turn( Greenfoot.getRandomNumber(90)-45 ); 
     }
 } 

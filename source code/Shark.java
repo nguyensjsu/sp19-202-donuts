@@ -9,9 +9,8 @@ public class Shark extends Actor implements Subject
 
     private GreenfootImage image1;
     private Actor fish, turtle, hook;
-    private World world;
+    static World world;
     private GameMessage msg;
-     
     private ArrayList<Observer> observers =  new ArrayList<Observer>();
     private int count=0;
     public Shark()
