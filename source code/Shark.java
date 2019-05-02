@@ -1,8 +1,8 @@
 import greenfoot.*;
 
 /**
- * This class defines a shark. Sharks swim in the ocean and look to eat fish, but 
-   can get caught by a hook.
+ * This class defines a shark. Sharks swim in the ocean and look to eat fish, but
+    * can get caught by a hook.
  */
 public class Shark extends Actor
 {
@@ -13,7 +13,7 @@ public class Shark extends Actor
     private int fishsEaten;
     private int counter = 0;
 
-    //methods omitte  
+    //methods omitte
     public Shark()
     {
         image1 = new GreenfootImage("Shark-1.png");
