@@ -7,7 +7,7 @@ public class GameScoreObserver implements Observer
     private int turtleCount = SharkWorld.turtleCount;
     private String FISHSTRING = "Fishes : ";
     private String TURTLESTRING = "Turtles : ";
-   
+
     public GameScoreObserver()
     {     
     }
@@ -28,7 +28,9 @@ public class GameScoreObserver implements Observer
          
         if (fishCount == 0 && turtleCount == 0)
         {
+            
             Greenfoot.playSound("Cheering.wav");
+            
             Greenfoot.stop();
           
         }

@@ -6,7 +6,7 @@ public class SharkWorld extends greenfoot.World
   
     ObjectFactory objectFactory = new ObjectFactory();
     Objects newObject = null;
-    Shark shark; 
+    Shark shark;
     static int fishCount=6, turtleCount=3, hookCount=2;
     //static int fishCount, turtleCount, hookCount;
   
@@ -63,4 +63,5 @@ public class SharkWorld extends greenfoot.World
         shark.attach(new GameScoreObserver()); //attaching the GameScoreObserver
         shark.attach(new GameSoundObserver()); // attaching the GameSoundObserver
     }
+   
 }

@@ -15,26 +15,34 @@ public class StartScreen extends World
      */
     public StartScreen()
     {  
-         
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-         GameTitle title = new GameTitle();
-        addObject(title, 300,200);
-         //prepare();
         Greenfoot.start();
+        Greenfoot.setWorld(this);
+        prepare();
     }
     
     private void prepare()
     {
+        GameTitle gameTitle = new GameTitle();
+        addObject(gameTitle,300,100);
+        StartGame startGame = new StartGame(this);
+        addObject(startGame,150,300);
+        ExitGame exitGame = new ExitGame(this);
+        addObject(exitGame,450,300);
         
-        //GameTitle title = new GameTitle();
-        //addObject(title, 300,200);
     }
     
-    public void act()
-    {
-        
+    public void act() {
+        if(Greenfoot.isKeyDown("enter"))
+            Greenfoot.setWorld(new SharkWorld());
     }
     
+    public void startGame() {
+        Greenfoot.setWorld(new SharkWorld());
+    }
     
+    public void exitGame() {
+        System.exit(0);
+    }
 }
