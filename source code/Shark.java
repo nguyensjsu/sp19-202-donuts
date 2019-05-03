@@ -7,11 +7,12 @@ import greenfoot.*;
 public class Shark extends Actor
 {
 
-    private GreenfootImage image1;
-    private GreenfootImage image2;
+    public GreenfootImage image1;
+    public GreenfootImage image2;
 
-    private int fishsEaten;
-    private int counter = 0;
+    public int fishsEaten;
+    public int counter = 0;
+    public int count = 1;
 
     //methods omitte
     public Shark()
@@ -22,63 +23,13 @@ public class Shark extends Actor
         fishsEaten=0;
     }
 
-    public void act()
-    {
-        move(5) ;
-        lookForfish();
-        checkKeyPress();
-        switchImage();
+    public  boolean isTouchingWrapper(java.lang.Class<?> cls) {
+        return isTouching(cls);
     }
 
-    public void checkKeyPress()
-    {
-        if (Greenfoot.isKeyDown("left"))
-        {
-            turn (-6);
-        }
-
-        if (Greenfoot.isKeyDown("right"))
-        {
-            turn(6);
-        }
+    public void removeTouchingWrapper(java.lang.Class<?> cls) {
+        removeTouching(cls);
     }
 
-    /**
-     * Check whether we have stumbled upon a fish
-     * If we have, eat it. if not, do nothing
-     */
-    public void lookForfish()
-    {
-
-        if ( isTouching(fish.class) )
-        {
-            removeTouching(fish.class);
-            Greenfoot.playSound("bite.wav");
-
-            fishsEaten = fishsEaten + 1;
-            if (fishsEaten == 8)
-            {
-                Greenfoot.playSound("champions.wav");
-                Greenfoot.stop();
-            }
-        }
-    }
-
-    public void switchImage()
-    {
-        counter ++;
-        if (counter == 4)
-        {
-            if (getImage () == image1)
-            {
-                setImage(image2);
-            }
-            else
-            {
-                setImage(image1);
-            }
-            counter = 0;
-        }
-    }
 }
 
