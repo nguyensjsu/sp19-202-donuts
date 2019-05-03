@@ -9,19 +9,16 @@
 
 * [Team Donuts Repo]: https://github.com/nguyensjsu/sp19-202-donuts
 
-
 ## Shark Attack
 
-## Project Description
+## Youtube Ad Video
 
-## Project Progress
-Setting up project’s document
+## Sprint Task Sheet
 
-### Burndown Map
+## Class Diagram (Final)
 
-### Project Dashboard
+## Activity Diagram
 
-### Individual Contributions
-1. Varun Potlacheruvu
-2. Tushar Sharma
-3. Tejas Desai
+## Use Case Diagram
+
+
