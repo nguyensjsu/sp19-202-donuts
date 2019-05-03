@@ -1,5 +1,21 @@
 # Weekly Scrum Report:
 
+## Week 3: 04/24 - 05/03:
+
+### What tasks did I work on / complete?
+1. Added a start screen to the game
+2. Worked on the Ad video and completed the Activity diagram
+3. Finalized the sprint task sheet and story board to show progress over the 3 weeks
+4. Co-ordinated with Tushar and Tejas to complete the final class diagram and sytem seqeunce diagrams
+
+I also picked a XP value of Commmunication. As part of this, during the course of the week I suggested below:
+1. Working on the system sequence diagrams to make sure everyone is on the same page
+2. To make sure there are no blockers in between team members
+
+### What am I planning to work on next?
+1. Refining the code and diagrams before submission
+2. Testing the different aspects of the game to ensure consistency
+
 ## Week 2: 04/16 - 04/23:
 
 ### What tasks did I work on / complete?
