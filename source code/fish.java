@@ -13,7 +13,7 @@ public class Fish extends Objects
     public void act() 
     {
         randomTurn();
-        move(1) ;
+        move(2) ;
         turnAtEdge();
     }
 	

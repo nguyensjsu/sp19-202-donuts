@@ -13,6 +13,8 @@ public class Shark extends Actor implements Subject
     private GameMessage msg;
     private ArrayList<Observer> observers =  new ArrayList<Observer>();
     private int count=0;
+    private boolean gameOver = false;
+    
     public Shark()
     {
         world = getWorld();
@@ -23,7 +25,7 @@ public class Shark extends Actor implements Subject
     public void act()
     {
        msg = (GameMessage) getWorld().getObjects(GameMessage.class).get(0);
-       move(2);
+       move(3);
        lookForFish() ;
        lookForTurtle();
        ifTouchHook();
@@ -55,7 +57,8 @@ public class Shark extends Actor implements Subject
       {
           notifyObservers("shark", msg); // notify observers for updating score and playing sound
           getWorld().removeObject(this); // remove shark and end game
-          Greenfoot.stop();
+          gameOver = true;
+          gameScore();
       }
     }
     
@@ -72,6 +75,7 @@ public class Shark extends Actor implements Subject
           notifyObservers("fish", msg); // notify observers for updating score and playing sound
           scaleImage(count);
           getWorld().removeObject(fish); //after fish is eaten, remove from the world
+          gameScore();
       }
     }
     
@@ -88,6 +92,25 @@ public class Shark extends Actor implements Subject
            notifyObservers("turtle", msg); // notify observers for updating score and playing sound
            scaleImage(count);
            getWorld().removeObject(turtle); //after turtle is eaten remove from the world
+           gameScore();
+        }
+    }
+    
+    public void gameScore()
+    {
+        int fish = GameScoreObserver.fishCnt;
+        int turtle = GameScoreObserver.turtleCnt;
+        if (fish == 0 && turtle == 0)
+        {
+            Greenfoot.playSound("Cheering.wav");
+            Greenfoot.delay(200);
+            gameOver = true;
+        }
+        if (gameOver) 
+        {
+            Greenfoot.delay(200);
+            Greenfoot.stop();
+            Greenfoot.setWorld(new StartScreen());
         }
     }
     

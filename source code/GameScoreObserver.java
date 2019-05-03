@@ -1,41 +1,31 @@
 import greenfoot.*;
 
-
 public class GameScoreObserver implements Observer
 {
-    private int fishCount = SharkWorld.fishCount;
-    private int turtleCount = SharkWorld.turtleCount;
     private String FISHSTRING = "Fishes : ";
     private String TURTLESTRING = "Turtles : ";
-
+    private int fish=0, turtle=0;
+    static int fishCnt, turtleCnt;
     public GameScoreObserver()
     {     
+         
     }
     
     public void update(String item, GameMessage msg)
-    {
-       
+    {  
         Shark shark = (Shark) msg.getWorld().getObjects(Shark.class).get(0);
         if(item=="fish")
-        {    
-            fishCount--;    
+        {   
+            fish++;    
         }
         else if (item=="turtle")
         {
-            turtleCount--;
-        }
+            turtle++;  
+        } 
         
-         
-        if (fishCount == 0 && turtleCount == 0)
-        {
-            
-            Greenfoot.playSound("Cheering.wav");
-            
-            Greenfoot.stop();
-          
-        }
-        
-        msg.setText(FISHSTRING + fishCount +"\n"+ TURTLESTRING + turtleCount);
+        fishCnt = SharkWorld.fishCount - fish ;
+        turtleCnt = SharkWorld.turtleCount - turtle;
+        msg.setText(FISHSTRING + fishCnt +"\n"+ TURTLESTRING + turtleCnt);
     }
         
         

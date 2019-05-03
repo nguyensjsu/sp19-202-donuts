@@ -1,4 +1,4 @@
- import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class StartScreen here.
@@ -25,24 +25,23 @@ public class StartScreen extends World
     private void prepare()
     {
         GameTitle gameTitle = new GameTitle();
-        addObject(gameTitle,300,100);
+        addObject(gameTitle,300,150);
         StartGame startGame = new StartGame(this);
-        addObject(startGame,150,300);
-        ExitGame exitGame = new ExitGame(this);
-        addObject(exitGame,450,300);
-        
+        addObject(startGame,300,350);
+ 
     }
     
-    public void act() {
+    public void act() 
+    {
         if(Greenfoot.isKeyDown("enter"))
-            Greenfoot.setWorld(new SharkWorld());
+           startGame();
     }
     
-    public void startGame() {
+    public void startGame()
+    {
+        Greenfoot.playSound("StartsScreen.wav");
+        Greenfoot.delay(310);
         Greenfoot.setWorld(new SharkWorld());
     }
-    
-    public void exitGame() {
-        System.exit(0);
-    }
+ 
 }
