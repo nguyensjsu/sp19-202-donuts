@@ -1,4 +1,4 @@
-# Team Project Repo 
+# Team Project Repo : https://github.com/nguyensjsu/sp19-202-donuts
 
 ## Team Name: Donuts
 
@@ -7,9 +7,8 @@
 2. Tushar Sharma
 3. Tejas Desai
 
-* [Team Donuts Repo]: https://github.com/nguyensjsu/sp19-202-donuts
-
 ## Shark Attack
+This game is about a hungry shark searching for its prey in the ocean. 
 
 ## Youtube Ad Video
 
