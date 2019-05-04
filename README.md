@@ -19,7 +19,7 @@ https://youtu.be/-u5P5zkHTe8
 ## Class Diagram (Final)
 
 ## Activity Diagram
-![]https://github.com/nguyensjsu/sp19-202-donuts/blob/master/diagrams/Activity%20Diagram.jpg
+![](diagrams/Activity%20Diagram.jpg)
 
 ## Use Case Diagram
 
