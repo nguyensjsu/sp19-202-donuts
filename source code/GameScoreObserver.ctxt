@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=GameScoreObserver
+comment1.params=
+comment1.target=GameScoreObserver()
+comment2.params=item\ msg
+comment2.target=void\ update(java.lang.String,\ GameMessage)
+numComments=3

@@ -1,5 +1,26 @@
 # Weekly Scrum Report:
 
+## Week 1: 04/22 - 04/29:
+
+### What tasks did I work on / complete?
+
+1. Worked on a code to make more changes, created a branch for the code.
+
+### What am I planning to work on next?
+
+1. Work on UML Diagrams
+
+## Week 1: 04/15 - 04/22:
+
+### What tasks did I work on / complete?
+
+1. Worked on the source code on making level and terrain changes.
+
+### What am I planning to work on next?
+
+1. Work on improving code
+2. Work on UML Diagrams
+
 ## Week 1: 04/08 - 04/15:
 
 ### What tasks did I work on / complete?
