@@ -1,83 +1,115 @@
 import greenfoot.*;
-
+import java.util.ArrayList;
 /**
- * This class defines a shark. Sharks swim in the ocean and look to eat fish, but 
+ * This class defines a shark. Sharks swim in the ocean and look to eat fish and turtles, but 
    can get caught by a hook.
  */
-public class Shark extends Actor
+public class Shark extends Actor implements Subject
 {
 
     private GreenfootImage image1;
-    private GreenfootImage image2;
-
-    private int fishsEaten;
-    private int counter = 0;
-
-    //methods omitte  
+    private Actor fish, turtle, hook;
+    static World world;
+    private GameMessage msg;
+    private ArrayList<Observer> observers =  new ArrayList<Observer>();
+    private int count=0;
     public Shark()
     {
-        image1 = new GreenfootImage("Shark-1.png");
-        image2 = new GreenfootImage("Shark-3.png");
+        world = getWorld();
+        GreenfootImage image1 = new GreenfootImage("Shark-1.png");
         setImage(image1);
-        fishsEaten=0;
     }
 
     public void act()
     {
-        move(5) ;
-        lookForfish();
-        checkKeyPress();
-        switchImage();
+       msg = (GameMessage) getWorld().getObjects(GameMessage.class).get(0);
+       move(2);
+       lookForFish() ;
+       lookForTurtle();
+       ifTouchHook();
+       checkKeyPress();
     }
 
     public void checkKeyPress()
     {
-        if (Greenfoot.isKeyDown("left"))
-        {
-            turn (-6);
-        }
+        if (Greenfoot.isKeyDown("left"))  turn(-3);
 
-        if (Greenfoot.isKeyDown("right"))
-        {
-            turn(6);
-        }
+        if (Greenfoot.isKeyDown("right"))  turn(3); 
     }
-
+    
+    public void scaleImage(int count)
+    { 
+        GreenfootImage image1 = new GreenfootImage("Shark-1.png");
+        image1.scale(image1.getWidth() + count*8, image1.getHeight() + count*5);
+        setImage(image1);
+        //if (count == 1){
+         //Greenfoot.playSound("SharkBigger.wav");
+       // }
+    }
+    
+    /**
+     * Check whether we have stumbled upon a hook
+     * If we have, end game
+     */
+    public void ifTouchHook() 
+    {
+      hook = getOneIntersectingObject(Hook.class);
+      if(hook != null)
+      {
+          notifyObservers("shark", msg); // notify observers for updating score and playing sound
+          getWorld().removeObject(this); // remove shark and end game
+          Greenfoot.stop();
+      }
+    }
+    
     /**
      * Check whether we have stumbled upon a fish
      * If we have, eat it. if not, do nothing
      */
-    public void lookForfish()
+    public void lookForFish() 
     {
-
-        if ( isTouching(fish.class) )
+      fish = getOneIntersectingObject(Fish.class);
+      if(fish != null)
+      {
+          count= count+1;
+          notifyObservers("fish", msg); // notify observers for updating score and playing sound
+          scaleImage(count);
+          getWorld().removeObject(fish); //after fish is eaten, remove from the world
+      }
+    }
+    
+    /**
+     * Check whether we have stumbled upon a turtle
+     * If we have, eat it. if not, do nothing
+     */
+    public void lookForTurtle()
+    {
+        turtle = getOneIntersectingObject(Turtle.class);
+        if(turtle != null)
         {
-            removeTouching(fish.class);
-            Greenfoot.playSound("bite.wav");
-
-            fishsEaten = fishsEaten + 1;
-            if (fishsEaten == 8)
-            {
-                Greenfoot.playSound("champions.wav");
-                Greenfoot.stop();
-            }
+           count= count+1;
+           notifyObservers("turtle", msg); // notify observers for updating score and playing sound
+           scaleImage(count);
+           getWorld().removeObject(turtle); //after turtle is eaten remove from the world
         }
     }
-
-    public void switchImage()
+    
+   // OBSERVER PATTERN
+    public void attach(Observer obj)
     {
-        counter ++;
-        if (counter == 4)
+       observers.add(obj);  
+    }
+   
+    public void detach(Observer obj)
+    {
+       observers.remove(obj);
+    }
+    
+    public void notifyObservers(String item, GameMessage msg)
+    {
+        for(Observer obj : observers)
         {
-            if (getImage () == image1)
-            {
-                setImage(image2);
-            }
-            else
-            {
-                setImage(image1);
-            }
-            counter = 0;
+            obj.update(item, msg);
         }
     }
 }
