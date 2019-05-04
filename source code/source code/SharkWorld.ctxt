@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=SharkWorld
+comment1.params=
+comment1.target=SharkWorld()
+comment1.text=\n\ Create\ the\ shark\ world\ (the\ beach).\ Our\ world\ has\ a\ size\ \n\ of\ 800x600\ cells,\ where\ every\ cell\ is\ just\ 1\ pixel.\n
+comment2.params=
+comment2.target=void\ prepare()
+comment3.params=
+comment3.target=Shark\ addSharkToWorld()
+comment4.params=
+comment4.target=void\ addItems()
+comment5.params=shark
+comment5.target=void\ attachObservers(Shark)
+numComments=6

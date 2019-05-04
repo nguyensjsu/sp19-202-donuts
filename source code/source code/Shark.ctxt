@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Shark
+comment0.text=\r\n\ This\ class\ defines\ a\ shark.\ Sharks\ swim\ in\ the\ ocean\ and\ look\ to\ eat\ fish\ and\ turtles,\ but\ \r\n\ \ \ can\ get\ caught\ by\ a\ hook.\r\n
+comment1.params=
+comment1.target=Shark()
+comment10.params=item\ msg
+comment10.target=void\ notifyObservers(java.lang.String,\ GameMessage)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkKeyPress()
+comment4.params=count
+comment4.target=void\ scaleImage(int)
+comment5.params=
+comment5.target=void\ ifTouchHook()
+comment5.text=\r\n\ Check\ whether\ we\ have\ stumbled\ upon\ a\ hook\r\n\ If\ we\ have,\ end\ game\r\n
+comment6.params=
+comment6.target=void\ lookForFish()
+comment6.text=\r\n\ Check\ whether\ we\ have\ stumbled\ upon\ a\ fish\r\n\ If\ we\ have,\ eat\ it.\ if\ not,\ do\ nothing\r\n
+comment7.params=
+comment7.target=void\ lookForTurtle()
+comment7.text=\r\n\ Check\ whether\ we\ have\ stumbled\ upon\ a\ turtle\r\n\ If\ we\ have,\ eat\ it.\ if\ not,\ do\ nothing\r\n
+comment8.params=obj
+comment8.target=void\ attach(Observer)
+comment9.params=obj
+comment9.target=void\ detach(Observer)
+numComments=11
