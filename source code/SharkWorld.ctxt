@@ -2,7 +2,7 @@
 comment0.target=SharkWorld
 comment1.params=
 comment1.target=SharkWorld()
-comment1.text=\r\n\ Create\ the\ shark\ world\ (the\ beach).\ Our\ world\ has\ a\ size\ \r\n\ of\ 800x600\ cells,\ where\ every\ cell\ is\ just\ 1\ pixel.\r\n
+comment1.text=\n\ Create\ the\ shark\ world\ (the\ beach).\ Our\ world\ has\ a\ size\ \n\ of\ 800x600\ cells,\ where\ every\ cell\ is\ just\ 1\ pixel.\n
 comment2.params=
 comment2.target=void\ prepare()
 comment3.params=

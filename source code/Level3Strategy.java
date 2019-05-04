@@ -5,25 +5,25 @@ import greenfoot.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Level2Strategy implements LevelStrategy
+public class Level3Strategy implements LevelStrategy
 {
-    public Level2Strategy()
+    public Level3Strategy()
     {
     }
 
     public int setFishes()
     {
-        int fishes = 6;
+        int fishes = 9;
         return fishes;
     }
     public int setTurtles()
     {
-        int turtles = 4;
+        int turtles = 7;
         return turtles;
     }
     public int setHooks()
     {
-        int hooks = 2;
+        int hooks = 5;
         return hooks;
     }
 
