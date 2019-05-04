@@ -19,6 +19,8 @@ https://github.com/nguyensjsu/sp19-202-donuts/blob/master/docs/CMPE%20202%20-%20
 
 ## Class Diagram (Final)
 
+![](diagrams/Class%20Diagram.jpg)
+
 ## Activity Diagram
 ![](diagrams/Activity%20Diagram.jpg)
 
