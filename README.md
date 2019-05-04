@@ -25,5 +25,6 @@ https://github.com/nguyensjsu/sp19-202-donuts/blob/master/docs/CMPE%20202%20-%20
 ![](diagrams/Activity%20Diagram.jpg)
 
 ## Use Case Diagram
+https://github.com/nguyensjsu/sp19-202-donuts/blob/master/diagrams/Use-Case.png
 
 
