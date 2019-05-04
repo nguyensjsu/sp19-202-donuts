@@ -5,7 +5,7 @@
 ### What tasks did I work on / complete?
 1. Added a start screen to the game
 2. Worked on the Ad video and completed the Activity diagram
-3. Finalized the sprint task sheet and story board to show progress over the 3 weeks
+3. Finalized the sprint task sheet and story board with Tushar to show progress over the 3 weeks
 4. Co-ordinated with Tushar and Tejas to complete the final class diagram and sytem seqeunce diagrams
 
 I also picked a XP value of Commmunication. As part of this, during the course of the week I suggested below:
